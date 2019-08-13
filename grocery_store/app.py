@@ -42,7 +42,19 @@ def get_choice(valid_keys):
 
 
 def calculate_order(inventory, selections):
-    return None
+    untaxed_total = 0
+    for code in selections:
+        name = inventory[code].get('name')
+        if inventory[code].get('quantity') > 0:
+            inventory[code]['quantity'] -= 1
+            price = inventory[code].get('price')
+            untaxed_total += price
+            line = '\t{} @ ${:.2f}'.format(name.upper(), price)
+        else:
+            line = '\t{} UNAVAILABLE'.format(name)
+        print(line)
+
+    return untaxed_total
 
 
 def grocery_store():
@@ -59,7 +71,9 @@ def grocery_store():
             break
         selections.append(choice)
 
-    calculate_order(inventory, selections)
+    print('calculating order...')
+    untaxed_total = calculate_order(inventory, selections)
+    # sales_tax = calc_sales_tax(untaxed_total)
 
 
 if __name__ == '__main__':
