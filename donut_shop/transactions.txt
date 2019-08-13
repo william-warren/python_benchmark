@@ -1,1 +1,1 @@
-name, frosting, topping, cash in, cash out
+name, topping, flavor, cash in, cash out

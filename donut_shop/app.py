@@ -44,8 +44,8 @@ def get_money():
             print('Please enter amount in 0.00 format!')
 
 
-def make_transaction_line(name, frosting, topping, cash_in, cash_out):
-    return '{}, {}, {}, {:.2f}, {:.2f}\n'.format(name, frosting, topping, cash_in, cash_out)
+def make_transaction_line(name, topping, flavor, cash_in, cash_out):
+    return '{}, {}, {}, {:.2f}, {:.2f}\n'.format(name, topping, flavor, cash_in, cash_out)
 
 
 def donut_shop():
@@ -84,7 +84,7 @@ How much are you paying with?''')
     print('Here is your change: ${:.2f}\nHave a great day!'.format(cash_out))
 
     file_line = make_transaction_line(
-        name, frosting, topping, cash_in, cash_out)
+        name, topping, flavor, cash_in, cash_out)
     print(file_line)
 
 
