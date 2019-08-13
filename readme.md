@@ -7,3 +7,8 @@ Students will have SOME TIME LIMIT to create an application like this by SOME DA
 
 ### Grocery Store Check-out
 Terminal based application to simulate a grocery store.
+Skills used:
+* file input/output
+* multiple data types
+* dictionary collections
+* string methods
