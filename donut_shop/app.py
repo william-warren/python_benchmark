@@ -6,6 +6,9 @@ TRANSACTION_FILENAME = './donut_shop/transactions.txt'
 
 
 def open_donut_file(filename):
+    ''' str filename -> list str toppings, list str flavors
+    opens the json file and loads the object
+    returns the lists from the object '''
     with open(filename, 'r') as file:
         donut_dictionary = json.load(file)
 
@@ -15,6 +18,9 @@ def open_donut_file(filename):
 
 
 def get_choice(options):
+    ''' list str -> str
+    returns the users input if it is one of the options in the
+    parameter list '''
     while True:
         choice = input(' ? >>> ').strip().lower()
         if choice in options:
@@ -23,6 +29,8 @@ def get_choice(options):
 
 
 def check_money(str_money):
+    ''' str -> bool
+    return true if the str is in the format 0.00 '''
     split_money = str_money.split('.')
     if len(split_money) != 2:
         return False
@@ -33,6 +41,9 @@ def check_money(str_money):
 
 
 def get_money():
+    ''' None -> float
+    returns a float value of the money the user is
+    paying with '''
     while True:
         str_money = input('? >>> $').strip()
         if check_money(str_money):
@@ -46,15 +57,21 @@ def get_money():
 
 
 def make_transaction_line(name, topping, flavor, cash_in, cash_out):
+    ''' str, str, str, float, float -> str
+    returns the input parameters as a single line matching the format
+    for the transaction file '''
     return '{}, {}, {}, {:.2f}, {:.2f}\n'.format(name, topping, flavor, cash_in, cash_out)
 
 
 def save_transaction(filename, file_line):
+    ''' str filename, str -> None
+    appends the string line to the file '''
     with open(filename, 'a') as file:
         file.write(file_line)
 
 
 def donut_shop():
+    ''' core of the application '''
     toppings, flavors = open_donut_file(DONUT_FILENAME)
     print('''Hello! Welcome to the Donut Shop!
     
