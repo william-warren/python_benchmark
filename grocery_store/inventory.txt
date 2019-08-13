@@ -1,5 +1,5 @@
 code, name, description, price, quantity
-001, apple, fresh red apple, 0.4, 15
-002, donut, donut with sprinkles, 0.99, 13
-003, coke, bottle of coca cola, 1.49, 10
+001, apple, fresh red apple, 0.4, 14
+002, donut, donut with sprinkles, 0.99, 11
+003, coke, bottle of coca cola, 1.49, 9
 004, bacon, farm fresh bacon, 4.99, 5

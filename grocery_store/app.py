@@ -1,3 +1,4 @@
+FILENAME = './grocery_store/inventory.txt'
 SALES_TAX = 0.07
 
 
@@ -64,10 +65,35 @@ def calc_sales_tax(untaxed_total):
     return SALES_TAX * untaxed_total
 
 
+def save_inventory(filename, inventory):
+    with open(filename, 'r') as file:
+        header_line = file.readline()
+        lines = file.readlines()
+
+    new_inventory = header_line
+    header_keys = header_line.split(',')
+    line_keys = []
+    for line in lines:
+        code = line.split(',')[0].strip()
+        line_keys.append(code)
+
+    for code in line_keys:
+        item = inventory.get(code)
+        values = []
+        for unformatted_key in header_keys:
+            key = unformatted_key.strip()
+            value = str(item.get(key))
+            values.append(value)
+        new_inventory += ', '.join(values) + '\n'
+
+    with open(filename, 'w') as file:
+        file.write(new_inventory)
+
+
 def grocery_store():
     print('Welcome to our grocery store!\nPlease review our inventory and make your selection.')
 
-    inventory = open_inventory('./grocery_store/inventory.txt')
+    inventory = open_inventory(FILENAME)
     print_inventory(inventory)
     print('What would you like today? Select the code from above and enter q when you are done.')
     choice = ''
@@ -88,6 +114,8 @@ def grocery_store():
        tax:  ${:.2f}
     '''.format(total_sale, untaxed_total, sales_tax)
     print(receipt)
+
+    save_inventory(FILENAME, inventory)
 
 
 if __name__ == '__main__':
