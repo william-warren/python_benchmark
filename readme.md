@@ -9,6 +9,10 @@ Students will have SOME TIME LIMIT to create an application like this by SOME DA
 Terminal based application to simulate a grocery store.
 Skills used:
 * file input/output
-* multiple data types
+* handling data types
 * dictionary collections
 * string methods
+* for and while iterations
+* user input/output
+* function extraction
+* list collections
