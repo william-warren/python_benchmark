@@ -2,6 +2,7 @@ import json
 from random import choice as randchoice
 
 DONUT_FILENAME = './donut_shop/donuts.json'
+TRANSACTION_FILENAME = './donut_shop/transactions.txt'
 
 
 def open_donut_file(filename):
@@ -48,6 +49,11 @@ def make_transaction_line(name, topping, flavor, cash_in, cash_out):
     return '{}, {}, {}, {:.2f}, {:.2f}\n'.format(name, topping, flavor, cash_in, cash_out)
 
 
+def save_transaction(filename, file_line):
+    with open(filename, 'a') as file:
+        file.write(file_line)
+
+
 def donut_shop():
     toppings, flavors = open_donut_file(DONUT_FILENAME)
     print('''Hello! Welcome to the Donut Shop!
@@ -85,7 +91,7 @@ How much are you paying with?''')
 
     file_line = make_transaction_line(
         name, topping, flavor, cash_in, cash_out)
-    print(file_line)
+    save_transaction(TRANSACTION_FILENAME, file_line)
 
 
 if __name__ == '__main__':
