@@ -12,12 +12,12 @@ def open_donut_file(filename):
     return toppings, flavors
 
 
-def get_topping(toppings):
+def get_choice(options):
     while True:
-        topping = input(' ? >>> ').strip().lower()
-        if topping in toppings:
-            return topping
-        print('Sorry!', topping, 'is not an option')
+        choice = input(' ? >>> ').strip().lower()
+        if choice in options:
+            return choice
+        print('Sorry!', choice, 'is not an option')
 
 
 def donut_shop():
@@ -31,7 +31,8 @@ def donut_shop():
 
     print('What topping would you like?')
     print(' | '.join(toppings))
-    topping = get_topping(toppings)
+    topping = get_choice(toppings)
+    flavor = get_choice(flavors)
 
 
 if __name__ == '__main__':
