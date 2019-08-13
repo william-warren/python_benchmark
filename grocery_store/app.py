@@ -11,7 +11,13 @@ def open_inventory(filename):
         item = {}
         for j in range(len(header_keys)):
             key = header_keys[j].strip()
-            val = unformatted_item[j].strip()
+
+            if key == 'price':
+                val = float(unformatted_item[j].strip())
+            elif key == 'quantity':
+                val = int(unformatted_item[j].strip())
+            else:
+                val = unformatted_item[j].strip()
             item[key] = val
         inventory_key = item.get('code')
         inventory[inventory_key] = item
@@ -19,11 +25,19 @@ def open_inventory(filename):
     return inventory
 
 
+def print_inventory(inventory):
+    for item in inventory.values():
+        s = '''{}
+        {}.
+        Price: ${:.2f}\n'''.format(item['name'].title(), item['description'].capitalize(), item['price'])
+        print(s)
+
+
 def grocery_store():
     print('Welcome to our grocery store!\nPlease review our inventory and make your selection.')
 
     inventory = open_inventory('./grocery_store/inventory.txt')
-    print(inventory)
+    print_inventory(inventory)
 
 
 if __name__ == '__main__':
