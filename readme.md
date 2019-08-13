@@ -16,3 +16,17 @@ Skills used:
 * user input/output
 * function extraction
 * list collections
+* basic calculations
+
+### Donut Shop Order Form
+Terminal based application for ordering donuts.
+Skills used:
+* importing modules
+* file input/output
+* json -> dictionaries
+* user input/output
+* input validation
+* branching
+* importing modules
+* basic calculations
+* list collections
