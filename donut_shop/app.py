@@ -44,6 +44,10 @@ def get_money():
             print('Please enter amount in 0.00 format!')
 
 
+def make_transaction_line(name, frosting, topping, cash_in, cash_out):
+    return '{}, {}, {}, {:.2f}, {:.2f}\n'.format(name, frosting, topping, cash_in, cash_out)
+
+
 def donut_shop():
     toppings, flavors = open_donut_file(DONUT_FILENAME)
     print('''Hello! Welcome to the Donut Shop!
@@ -52,7 +56,8 @@ def donut_shop():
     
     Choose your topping and flavor! Or get a random flavor!
     ''')
-
+    name = input("Can we get the name for this order?\n>>> ").strip()
+    print(f'Welcome {name}! We are happy to assist you today!')
     print(
         '[1] custom make your donut? or [2] have a random combination?')
     choice = get_choice(['1', '2'])
@@ -77,6 +82,10 @@ How much are you paying with?''')
     cash_in = get_money()
     cash_out = cash_in - 0.75
     print('Here is your change: ${:.2f}\nHave a great day!'.format(cash_out))
+
+    file_line = make_transaction_line(
+        name, frosting, topping, cash_in, cash_out)
+    print(file_line)
 
 
 if __name__ == '__main__':
