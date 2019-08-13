@@ -76,14 +76,14 @@ def calculate_order(inventory, selections):
 
 def calc_sales_tax(untaxed_total):
     ''' float -> float 
-    calculates the additional tax for the sale '''
+    calculates and returns the additional tax for the sale '''
     return SALES_TAX * untaxed_total
 
 
-def save_inventory(filename, inventory):
-    ''' str filename, dict of items -> None
-    opens and reads the filenames to get the current ordering of the values for the file.
-    creates a new string body for the file and updates the file. '''
+def make_file_body(filename, inventory):
+    ''' str filename, dict of items -> string 
+    opens and reads the filenames to get the current ordering of the values for the file
+    returns the string body for the file '''
     with open(filename, 'r') as file:
         header_line = file.readline()
         lines = file.readlines()
@@ -103,6 +103,13 @@ def save_inventory(filename, inventory):
             value = str(item.get(key))
             values.append(value)
         new_inventory += ', '.join(values) + '\n'
+
+    return new_inventory
+
+
+def save_inventory(filename, new_inventory):
+    ''' str filename, str -> None
+    updates the file body with the updated string '''
 
     with open(filename, 'w') as file:
         file.write(new_inventory)
@@ -134,7 +141,8 @@ def grocery_store():
     '''.format(total_sale, untaxed_total, sales_tax)
     print(receipt)
 
-    save_inventory(FILENAME, inventory)
+    new_inventory = make_file_body(FILENAME, inventory)
+    save_inventory(FILENAME, new_inventory)
 
 
 if __name__ == '__main__':
