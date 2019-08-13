@@ -1,0 +1,5 @@
+code, item name, item description, price, quantity
+001, apple, fresh red apple, 0.4, 15
+002, donuts, donuts with sprinkles, 0.99, 13
+003, coke, bottle of coca cola, 1.49, 10
+004, bacon, farm fresh bacon, 4.99, quantity
