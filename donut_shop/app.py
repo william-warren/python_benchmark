@@ -1,4 +1,5 @@
 import json
+from random import choice as randchoice
 
 DONUT_FILENAME = './donut_shop/donuts.json'
 
@@ -35,7 +36,7 @@ def get_money():
         str_money = input('? >>> $').strip()
         if check_money(str_money):
             money = float(str_money)
-            if money >= 1.00:
+            if money >= 0.75:
                 return money
             else:
                 print('Not enough money!')
@@ -47,25 +48,35 @@ def donut_shop():
     toppings, flavors = open_donut_file(DONUT_FILENAME)
     print('''Hello! Welcome to the Donut Shop!
     
-    All donuts are $1, cash only.
+    All donuts are 75¢, cash only.
     
     Choose your topping and flavor! Or get a random flavor!
     ''')
 
-    print('What topping would you like?')
-    print(' | '.join(toppings))
-    topping = get_choice(toppings)
-    print('\nWhat flavor would you like?')
-    print(' | '.join(flavors))
-    flavor = get_choice(flavors)
+    print(
+        '[1] custom make your donut? or [2] have a random combination?')
+    choice = get_choice(['1', '2'])
+    if choice == '1':
+        print('What topping would you like?')
+        print(' | '.join(toppings))
+        topping = get_choice(toppings)
+        print('\nWhat flavor would you like?')
+        print(' | '.join(flavors))
+        flavor = get_choice(flavors)
+        print('Your order: donut with {} topping and {} flavored icing, great choice!'.format(
+            topping, flavor))
+    else:
+        topping = randchoice(toppings)
+        flavor = randchoice(flavors)
+        print('Your order: donut with {} topping and {} flavored icing, we hope you like it!'.format(
+            topping, flavor))
 
     print('''
-        Your order: donut with {} topping and {} flavored icing, great choice!
-        Your total is $1.00
-    How much are you paying with?''')
+>>> Your total is $0.75
+How much are you paying with?''')
     cash_in = get_money()
-    cash_out = cash_in - 1
-    print(cash_in, cash_out)
+    cash_out = cash_in - 0.75
+    print('Here is your change: ${:.2f}\nHave a great day!'.format(cash_out))
 
 
 if __name__ == '__main__':
