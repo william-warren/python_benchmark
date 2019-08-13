@@ -27,10 +27,22 @@ def open_inventory(filename):
 
 def print_inventory(inventory):
     for item in inventory.values():
-        s = '''{}
+        s = '''{} {}
         {}.
-        Price: ${:.2f}\n'''.format(item['name'].title(), item['description'].capitalize(), item['price'])
+        Price: ${:.2f}\n'''.format(item['name'].title(), item['code'], item['description'].capitalize(), item['price'])
         print(s)
+
+
+def get_choice(valid_keys):
+    while True:
+        choice = input('>>> ').strip()
+        if choice in valid_keys or choice == 'q':
+            return choice
+        print('invalid choice')
+
+
+def calculate_order(inventory, selections):
+    return None
 
 
 def grocery_store():
@@ -38,6 +50,16 @@ def grocery_store():
 
     inventory = open_inventory('./grocery_store/inventory.txt')
     print_inventory(inventory)
+    print('What would you like today? Select the code from above and enter q when you are done.')
+    choice = ''
+    selections = []
+    while True:
+        choice = get_choice(inventory.keys())
+        if choice == 'q':
+            break
+        selections.append(choice)
+
+    calculate_order(inventory, selections)
 
 
 if __name__ == '__main__':
