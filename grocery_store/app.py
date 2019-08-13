@@ -3,6 +3,9 @@ SALES_TAX = 0.07
 
 
 def open_inventory(filename):
+    ''' str filename -> dictionary(dictionary items)
+    opens the file and returns a dictionary of each item with
+    the item code serving as the key '''
     with open(filename, 'r') as file:
         header = file.readline()
         body = file.readlines()
@@ -30,6 +33,8 @@ def open_inventory(filename):
 
 
 def print_inventory(inventory):
+    ''' str -> None
+    prints each each item to the user '''
     for item in inventory.values():
         s = '''{} {}
         {}.
@@ -38,6 +43,9 @@ def print_inventory(inventory):
 
 
 def get_choice(valid_keys):
+    ''' dict keys -> None
+    allows user to make only valid selections based on keys in dictionary
+    or 'q' to end the loop '''
     while True:
         choice = input('>>> ').strip()
         if choice in valid_keys or choice == 'q':
@@ -46,6 +54,11 @@ def get_choice(valid_keys):
 
 
 def calculate_order(inventory, selections):
+    ''' dict of items, list of item codes -> float total
+    iterates through the list of codes to update the inventory with the appropriate quantity
+    calculates the untaxed total for the total sale for items that are in stock, and 
+    prints the order line by line to the user '''
+
     untaxed_total = 0
     for code in selections:
         name = inventory[code].get('name')
@@ -62,10 +75,15 @@ def calculate_order(inventory, selections):
 
 
 def calc_sales_tax(untaxed_total):
+    ''' float -> float 
+    calculates the additional tax for the sale '''
     return SALES_TAX * untaxed_total
 
 
 def save_inventory(filename, inventory):
+    ''' str filename, dict of items -> None
+    opens and reads the filenames to get the current ordering of the values for the file.
+    creates a new string body for the file and updates the file. '''
     with open(filename, 'r') as file:
         header_line = file.readline()
         lines = file.readlines()
@@ -91,8 +109,9 @@ def save_inventory(filename, inventory):
 
 
 def grocery_store():
-    print('Welcome to our grocery store!\nPlease review our inventory and make your selection.')
+    ''' the main core of the application '''
 
+    print('Welcome to our grocery store!\nPlease review our inventory and make your selection.')
     inventory = open_inventory(FILENAME)
     print_inventory(inventory)
     print('What would you like today? Select the code from above and enter q when you are done.')
