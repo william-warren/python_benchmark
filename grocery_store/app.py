@@ -1,3 +1,6 @@
+SALES_TAX = 0.07
+
+
 def open_inventory(filename):
     with open(filename, 'r') as file:
         header = file.readline()
@@ -57,6 +60,10 @@ def calculate_order(inventory, selections):
     return untaxed_total
 
 
+def calc_sales_tax(untaxed_total):
+    return SALES_TAX * untaxed_total
+
+
 def grocery_store():
     print('Welcome to our grocery store!\nPlease review our inventory and make your selection.')
 
@@ -73,7 +80,14 @@ def grocery_store():
 
     print('calculating order...')
     untaxed_total = calculate_order(inventory, selections)
-    # sales_tax = calc_sales_tax(untaxed_total)
+    sales_tax = calc_sales_tax(untaxed_total)
+    total_sale = untaxed_total + sales_tax
+    receipt = '''
+    TOTAL:   ${:.2f}
+       cost: ${:.2f}
+       tax:  ${:.2f}
+    '''.format(total_sale, untaxed_total, sales_tax)
+    print(receipt)
 
 
 if __name__ == '__main__':
