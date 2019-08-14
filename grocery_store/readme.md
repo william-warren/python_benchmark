@@ -2,6 +2,7 @@
 
 ### Goal
 Make a terminal based grocery store in python that allows users to shop.
+**app.py is an example application of this assignment being successfully completed**
 
 ### Requirements
 * Reads text from csv inventory into a dictionary object representing the inventory.
