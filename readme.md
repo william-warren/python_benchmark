@@ -5,6 +5,16 @@ The programs contained in this repository are examples of sufficient mastery of 
 ### Assessment
 Students will have 1/2 Day (two blocks, or about 3 hours) to create an application like this by **DATE TBD**.\ This task should be done with limited access to notes and resources.
 
+### Expected Breakdown of Time and workflow
+20 minutes of understanding the problem and planning\
+30 minutes to open file content into the appropriate data collection\
+20 minutes of iterating through the collection and displaying to user to make selections\
+30 minutes to create inputs and decision branches\
+15 minutes to implement basic calculations\
+15 minutes to save the output file in the correct format\
+20 minutes of research and searching for answers (dispersed throughout)\
+30 minutes of general debugging (dispersed throughout)\
+
 ### Grocery Store Check-out
 Terminal based application to simulate a grocery store.\
 **Has sample solution**\
