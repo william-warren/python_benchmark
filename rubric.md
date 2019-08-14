@@ -25,6 +25,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper ultrices
 | Python Dictionaries             | [ ]                | [ ]              | [ ]              |
 | Understanding and use of methods             | [ ]                | [ ]              | [ ]              |
 | Importing and using modules             | [ ]                | [ ]              | [ ]              |
+
 Additional Thoughts:\
 Duis orci orci, venenatis quis lacus blandit, finibus dictum tortor. Duis nec gravida massa, quis hendrerit ligula. Fusce a tellus vitae lectus finibus sagittis. Aliquam rhoncus est risus, eu tristique justo porta ut. Aenean sed lacus sem. Vivamus ut mi et sem fermentum sollicitudin. Vivamus vulputate mauris odio, et tincidunt sem bibendum id. 
 
