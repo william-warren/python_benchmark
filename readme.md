@@ -7,6 +7,7 @@ Students will have 1/2 Day (two blocks, or about 3 hours) to create an applicati
 
 ### Grocery Store Check-out
 Terminal based application to simulate a grocery store.
+**Has sample solution**
 Skills used:
 * file input/output
 * handling data types
@@ -20,6 +21,7 @@ Skills used:
 
 ### Donut Shop Order Form
 Terminal based application for ordering donuts.
+**Has sample solution**
 Skills used:
 * importing modules
 * file input/output
@@ -27,6 +29,19 @@ Skills used:
 * user input/output
 * input validation
 * branching
-* importing modules
 * basic calculations
 * list collections
+
+### Movie Theater Ticket Order
+Terminal based application for buyin movie tickets.
+Skills Used:
+* file input/output
+* json -> dictionaries
+* user input/output
+* input validation
+* branching
+* basic calculations
+* list collections
+* string formatting and methods
+* iterating through multiple collections
+* converting appropriate data types
