@@ -1,7 +1,8 @@
 # Donut Shop
 
 ### Goal
-Make a terminal based donut shop in python that allows users to make decision on the donut of their choice.
+Make a terminal based donut shop in python that allows users to make decision on the donut of their choice.\
+**app.py is an example application of this assignment being successfully completed**
 
 ### Requirements
 * Reads donut options (icing flavors, toppings, etc.) from a json file.
