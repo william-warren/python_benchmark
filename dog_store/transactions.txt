@@ -1,0 +1,2 @@
+time, pretax sale, tax, total sale
+2019-08-14 11:00:47.145435, 8.33, 0.58, 8.91

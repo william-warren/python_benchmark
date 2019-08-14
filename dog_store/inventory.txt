@@ -1,0 +1,10 @@
+item, type, dog size, price, quantity
+big rawhide, treat, big dogs, 1.55, 18
+peanut butter cookie, treat, all dogs, 0.88, 33
+squeaker mouse, toy, small dogs, 5.44, 10
+squaker duck, toy, big dogs, 6.33, 10
+kong ball, toy, all dogs, 8.88, 5
+mini bone, treat, small dogs, 3.50, 22
+mega bone, treat, big dogs, 4.00, 16
+tennis ball, toy, all dogs, 0.99, 43
+premium tennis ball, toy, all dogs, 1.49, 37

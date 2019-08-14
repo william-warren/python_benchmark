@@ -33,7 +33,7 @@ Skills used:
 * list collections
 
 ### Movie Theater Ticket Order
-Terminal based application for buyin movie tickets.
+Terminal based application for buying movie tickets.
 Skills Used:
 * file input/output
 * json -> dictionaries
@@ -45,3 +45,16 @@ Skills Used:
 * string formatting and methods
 * iterating through multiple collections
 * converting appropriate data types
+
+### Dog Store Program
+Terminal based application to buy dog treats and toys.
+Skills Used:
+* file input/output
+* converting types
+* data collections
+* for and while iterations
+* user input/output
+* string formatting and methods
+* basic calculations
+* branching
+* importing modules
