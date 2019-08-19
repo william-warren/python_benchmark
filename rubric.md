@@ -16,17 +16,18 @@ Additional reflections on the overall project will be shared.
 | Checkbox Experiments | Needs Improvement  |  Meets Expectations  | Exceeds Expectations
 | ---------------------|:---------------------:|:-------------------:|:-------------------:|
 | Python Syntax             | [ ]                | [ ]              | [ ]              |
+| Translating ideas into Python     | [ ]                | [ ]              | [ ]              |
 | Reading Files             | [ ]                | [ ]              | [ ]              |
 | Writing Files             | [ ]                | [ ]              | [ ]              |
-| Extracting Functions             | [ ]                | [ ]              | [ ]              |
+| Extracting Functions     | [ ]                | [ ]              | [ ]              |
 | Collecting User Input    | [ ]                | [ ]              | [ ]              |
 | Using Appropriate Types  | [ ]                | [ ]              | [ ]              |
-| Clear User Outputs  | [ ]                | [ ]              | [ ]              |
+| Clear User Outputs     | [ ]                | [ ]              | [ ]              |
 | For Loops             | [ ]                | [ ]              | [ ]              |
 | While Loops             | [ ]                | [ ]              | [ ]              |
 | Python Lists             | [ ]                | [ ]              | [ ]              |
 | Python Dictionaries             | [ ]                | [ ]              | [ ]              |
-| Understanding and use of methods             | [ ]                | [ ]              | [ ]              |
+| Understanding and use of methods | [ ]                | [ ]              | [ ]              |
 | Importing and using modules             | [ ]                | [ ]              | [ ]              |
 
 **Additional Thoughts:**\
