@@ -3,7 +3,10 @@
 The programs contained in this repository are examples of sufficient mastery of the fundamentals of programming in python.
 
 ### Assessment
-Students will have 1/2 Day (two blocks, or about 3 hours) to create an application like this by **DATE TBD**.\ This task should be done with limited access to notes and resources.
+Students will have 1/2 Day (two blocks, or about 3 hours) to create an application like this by October 23rd.\ This task should be done with limited access to notes and resources.\
+First Assessment: Week of September 16th\
+Second Assessment: Week of September 30th\
+Third Assessment: Week of October 14th
 
 ### Expected Breakdown of Time and workflow
 20 minutes of understanding the problem and planning\
