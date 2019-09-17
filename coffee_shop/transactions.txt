@@ -1,0 +1,2 @@
+time, item, pretax sale, tax
+2019-09-16 11:00:47.145435, cafe au lait, 3.45, 0.24
