@@ -3,7 +3,7 @@
 -------------------------
 
 #### Goal
-To create a library based application that allows the user to check out and return books. For this application, it is assumed that the user is a librarian; therefore, the text interface does not need to be as rich.
+To create a library based application that allows the user to check out and return books. For this application, it is assumed the user is a librarian; therefore, the text interface does not need to be as rich.
 
 #### App Requirements
 * The user should only be able to check out or return valid books (i.e. the book should be in stock in order to be checked-in)
