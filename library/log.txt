@@ -1,0 +1,6 @@
+date, class, action, title
+2019-09-29 08:12:09.198231, PR6039.O32 L67, CHECK OUT, The Fellowship of the Ring
+2019-09-30 14:27:11.638765, PR6039.O32 L67, CHECK IN, The Fellowship of the Ring
+2019-10-01 11:11:11.111111, PR6039.O32 H63, CHECK OUT, The Hobbit
+2019-10-01 16:33:06.182766,  PR6039.O32 L69, CHECK OUT, The Return of the King
+2019-10-04 07:51:06.935654, PR6039.O32 L69, CHECK IN, The Return of the King
