@@ -30,6 +30,10 @@ def main():
             practically dissipated.  Hence why I did not even attempt it.  
     """
     )
+    print(
+        "yeet".center(40, "-"),
+        "\nHonesetly don't see why there were so many complaints about this hint, It's sorta straightforward.",
+    )
 
 
 if __name__ == "__main__":
